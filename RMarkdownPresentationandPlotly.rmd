@@ -1,0 +1,38 @@
+---
+title: "R Markdown Presentation and Plotly"
+author: "William T Ellis"
+date: "9/5/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Set working directory.
+
+```{r}
+setwd("~/Desktop/Data Science Courses/RMarkdownPresentationandPlotly")
+getwd()
+```
+
+## Load Plotly.  (Also installs ggplot2).
+
+```{r}
+## install.packages("plotly")(I had to # this out in order to get the html file.)
+library("plotly")
+```
+
+## Look for database.
+### Using "Iris"...
+
+```{r}
+Petal <- plot_ly(data = iris, x = ~Sepal.Length, y = ~Sepal.Width, color = ~Species)
+Petal
+```
+
+## Set date.
+
+```{r}
+Sys.Date()
+```
